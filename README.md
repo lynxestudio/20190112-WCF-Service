@@ -40,12 +40,8 @@ The REST architecture is becoming increasingly common, and WCF provides attribut
 <li>WebGetAttribute is for GET verb and WebInvokeAttribute is for all the other verbs. It also tells the dispatcher how to match the methods to URIs and how to parse the URI into method parameters.</li>
 </ul>
 </p>
+<b>The following table shows the properties of both WebGetAttribute and WebInvokeAttribute.</b><br/>
 <table>
-<th>
-<td cols="2">
-The following table shows the properties of both WebGetAttribute and WebInvokeAttribute.
-</td>
-</th>
 <tr>
 <td>Method</td>
 <td>The HTTP verb the method should respond to.</td>
