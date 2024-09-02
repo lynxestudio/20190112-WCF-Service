@@ -40,19 +40,46 @@ The REST architecture is becoming increasingly common, and WCF provides attribut
 <li>WebGetAttribute is for GET verb and WebInvokeAttribute is for all the other verbs. It also tells the dispatcher how to match the methods to URIs and how to parse the URI into method parameters.</li>
 </ul>
 </p>
-
+<table>
+<tr>
+<td cols="2">
 The following table shows the properties of both WebGetAttribute and WebInvokeAttribute.
-Method	The HTTP verb the method should respond to.
-UriTemplate	The definition of the URI the CLR method should respond to.
-RequestFormat	Enumeration that specifies the format for deserializing the request (Xml or Json).
-ResponseFormat	Enumeration that specifies the format for serializing the response (Xml or Json).
-BodyStyle	Enumeration that specifies whether the request and the response data should be wrapped in an element with the same name as the CLR method name. Bare is typically used with RESTful services.
-The essential components to construct a REST Service with WFC can be found in System.ServiceModel.Web assembly. However, the most important part of the process is designing the schema that you will use to provide access to the resources exposed by the service. So the main idea behind REST is to design your URIs in a way that makes logical sense based on your resource set. The URIs should, if possible, make sense to the application that consumes the data.
+</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>The HTTP verb the method should respond to.</td>
+</tr>
+<tr>
+<td>UriTemplate</td>
+<td>The definition of the URI the CLR method should respond to.</td>
+</tr>
+<tr>
+<td>RequestFormat</td>
+<td>Enumeration that specifies the format for deserializing the request (Xml or Json).</td>
+</tr>
+<tr>
+<td>ResponseFormat</td>
+<td>Enumeration that specifies the format for serializing the response (Xml or Json).</td>
+</tr>
+<tr>
+<td>BodyStyle</td>
+<td>Enumeration that specifies whether the request and the response data should be wrapped in an element with the same name as the CLR method name. Bare is typically used with RESTful services.</td>
+</tr>
+</table>
 
+<p align="justify">
+The essential components to construct a REST Service with WFC can be found in System.ServiceModel.Web assembly. However, the most important part of the process is designing the schema that you will use to provide access to the resources exposed by the service. So the main idea behind REST is to design your URIs in a way that makes logical sense based on your resource set. The URIs should, if possible, make sense to the application that consumes the data.
+</p>
+<p align="justify">
 Depending on the volume of data in the database, a query might retrieve a large number of items, therefore, it makes sense to provide additional query parameters that a user can specify to limit the number of items returned.
 
 Implementing a simple RESTful Service Example with WCF and Oracle.
-In this example, we will develop a WCF RESTful service by using Oracle HR Sample Schema, ODP.NET, ADO.NET and Visual Studio 2015. You can learn about the HR Schema in this post, I have written to introduce you to this schema. The following illustration shows the components in the Employee service that I have written for this post.
+In this example, we will develop a WCF RESTful service by using Oracle HR Sample Schema, ODP.NET, ADO.NET and Visual Studio.
+
+You can learn about the HR Schema in this post, I have written to introduce you to this schema. 
+The following illustration shows the components in the Employee service that I have written for this post.
+</p>
 
 Fig 1. Components of our Employee RESTFul service.
 
@@ -112,7 +139,3 @@ Fig 10. Querying only one employee.
 
 Also, a GET at http://localhost/WcfRest/EmployeeService.svc/110 show the employee with the ID 110.
 Fig 11. Querying another employee.
-
-
-
-Download example source code.
