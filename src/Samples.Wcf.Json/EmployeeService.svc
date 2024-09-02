@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" 
+    Debug="true" 
+    Service="Samples.Wcf.Json.EmployeeServiceImplementation" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"%>
